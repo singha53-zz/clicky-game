@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "image": "https://pbs.twimg.com/profile_images/1053055123193122816/IUwo6l_Q_400x400.jpg",
+    "clicked": false
+  },
+  {
+    "id": 2,
+    "image": "https://img00.deviantart.net/4566/i/2018/023/c/e/vegeta_by_wizyakuza-dc0zqa9.jpg",
+    "clicked": false
+  },
+  {
+    "id": 3,
+    "image": "https://vignette.wikia.nocookie.net/ultradragonball/images/3/3d/Android_18_%28401%29.png/revision/latest?cb=20160331161643",
+    "clicked": false
+  },
+  {
+    "id": 4,
+    "image": "https://i.pinimg.com/originals/89/32/4a/89324a46daaee4410e2cbcec794fd47a.jpg",
+    "clicked": false
+  },
+  {
+    "id": 5,
+    "image": "https://vignette.wikia.nocookie.net/dbxfanon/images/e/e9/Chichi_by_maffo1989-d6pkj5n.png/revision/latest?cb=20160710194457",
+    "clicked": false
+  },
+  {
+    "id": 6,
+    "image": "https://vignette.wikia.nocookie.net/dragonball/images/a/af/Piccolo_%28Dragon_Ball_Online%29.png/revision/latest?cb=20140926024327",
+    "clicked": false
+  },
+  {
+    "id": 7,
+    "image": "https://vignette.wikia.nocookie.net/dragonuniverse/images/d/d0/ShenronROF.png/revision/latest?cb=20160705154512",
+    "clicked": false
+  },
+  {
+    "id": 8,
+    "image": "https://imgix.ranker.com/user_node_img/50081/1001612547/original/22-photo-u1?w=650&q=50&fm=jpg&fit=crop&crop=faces",
+    "clicked": false
+  },
+  {
+    "id": 9,
+    "image": "https://static0.srcdn.com/wordpress/wp-content/uploads/Dragon-Ball-Z-Perfect-Cell.jpg",
+    "clicked": false
+  },
+  {
+    "id": 10,
+    "image": "https://i.ytimg.com/vi/VLJhzNvOKd4/maxresdefault.jpg",
+    "clicked": false
+  },
+  {
+    "id": 11,
+    "image": "https://cdn-images-1.medium.com/max/2000/1*4urWdQBOzdIhWfSmcaSfhg.png",
+    "clicked": false
+  },
+  {
+    "id": 12,
+    "image": "https://vignette.wikia.nocookie.net/dragonball/images/f/f0/Krillin_-_Bojack_Unbound_-_001.png/revision/latest?cb=20180823012728",
+    "clicked": false
+  }
+]
