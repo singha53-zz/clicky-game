@@ -1,23 +1,20 @@
 import React from 'react';
+import './Navbar.css'
 
 const Navbar = props => (
-  <div>
-    <nav className = "navbar">
+    <nav>
       <ul>
-        <li className="brand">
-          <a href="/">Clicky game</a>
-        </li>
-        <t 
-        score={props.score} 
-        topScore={props.topScore} >
-          <li className={ props.correct ? "correct" : "" }>{ props.correct ? "You guessed correctly!" : "You guessed incorrectly!"}</li>
-        </t>
         <li>
-          `Score: ${props.score} | Top Score: ${props.topScore}`
+           <a className="navbar-brand" href="https://clicky-game-uft.herokuapp.com/"><h3>DBZ Memory Game</h3></a>
+        </li>
+        <li >
+          Statement: { props.correct }
+        </li>
+        <li >
+          <h2>Score: { props.score } | Top Score: { props.topScore }</h2>
         </li>
       </ul>
     </nav>
-  </div>
 );
 
 export default Navbar;

@@ -20,6 +20,9 @@ class App extends Component {
         score = { this.state.score }
         topScore = { this.state.topScore }
         />
+        <div className="jumbotron text-center">
+          <h1 className="display-4">Dragon Ball Z Memory Game</h1>
+        </div>
         {/* <Header />
         <Main />
         <Footer /> */}
