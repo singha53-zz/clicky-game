@@ -5,7 +5,7 @@ const Navbar = props => (
     <nav>
       <ul>
         <li>
-           <a className="navbar-brand" href="https://clicky-game-uft.herokuapp.com/"><h3>DBZ Memory Game</h3></a>
+           <a className="navbar-brand" href="/"><h3>DBZ Memory Game</h3></a>
         </li>
         <li >
           { props.statement }

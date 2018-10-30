@@ -19,16 +19,18 @@ class App extends Component {
   }
 
   handleOnClick = id => {
-
+    console.log(!this.state.clicked.includes(id))
     // check if id of clicked image matches that in array
     if (!this.state.clicked.includes(id)){
       // if id not found add it to array
       this.setState({ clicked: this.state.clicked.concat(id) })
 
-      const updatedScore = this.state.score
+      const updatedScore = this.state.score + 1
+      console.log('updatedScore:' + updatedScore)
       // increment score
-      this.setState({ score: updatedScore + 1,
+      this.setState({ score: updatedScore,
       statement: "You guessed correctly!" })
+      console.log('score:' + this.state.score)
       // update topscore
       if (updatedScore >= this.state.topScore){
         this.setState({ topScore: updatedScore })
@@ -44,9 +46,9 @@ class App extends Component {
       statement: 'You guess incorrectly!',
       score: 0,
       clicked: [] })
-      // this.setState({ dbz:this.state.dbz.sort(function(a, b) {return 0.5 - Math.random()}),
-      // statement: "" })
+      this.setState({ dbz:this.state.dbz.sort(function(a, b) {return 0.5 - Math.random()})})
     }
+    console.log(this.state.score)
   }
 
   render() {
