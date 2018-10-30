@@ -8,7 +8,7 @@ const Navbar = props => (
            <a className="navbar-brand" href="https://clicky-game-uft.herokuapp.com/"><h3>DBZ Memory Game</h3></a>
         </li>
         <li >
-          Statement: { props.correct }
+          { props.statement }
         </li>
         <li >
           <h2>Score: { props.score } | Top Score: { props.topScore }</h2>

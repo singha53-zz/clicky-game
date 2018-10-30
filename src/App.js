@@ -1,23 +1,27 @@
 import React, { Component } from 'react';
 import Navbar from './components/Navbar';
 import Character from './components/Character';
-// import Footer from './components/Footer';
+import Container from './components/Container';
+import Col from './components/Col';
+import Row from './components/Row';
+import Footer from './components/Footer';
 import './App.css';
 import dbz from './dbz.json';
-import Methods from './utils/functions'
+import Alert from "./components/Alert";
 
 class App extends Component {
   state = {
-    dbz,
-    statement: ',
+    dbz: dbz,
+    statement: '',
     score: 0,
     topScore: 0,
     clicked: []
   }
 
-  handleOnClick = id =>{
+  handleOnClick = id => {
+
     // check if id of clicked image matches that in array
-    if (this.state.clicked.includes(id)){
+    if (!this.state.clicked.includes(id)){
       // if id not found add it to array
       this.setState({ clicked: this.state.clicked.concat(id) })
 
@@ -26,21 +30,22 @@ class App extends Component {
       this.setState({ score: updatedScore + 1,
       statement: "You guessed correctly!" })
       // update topscore
-      if (updatedScore > this.state.topScore){
-        this.setState({ this.setState({ this.state.topScore = updatedScore })})
-      } else if (updatedScore === 12) {
-        this.setState({ statement = "You win!" })
+      if (updatedScore >= this.state.topScore){
+        this.setState({ topScore: updatedScore })
       }
-      this.setState({ dbz: Methods.randomize(dbz) })
+      if (updatedScore === 12) {
+        this.setState({ statement: "You win!" })
+      }
+      this.setState({ dbz: this.state.dbz.sort(function(a, b) {return 0.5 - Math.random()}) })
     } else {
       // if id is found, reset game
       this.setState({ 
-      dbz,
+      dbz: dbz,
       statement: 'You guess incorrectly!',
       score: 0,
       clicked: [] })
-      this.setState({ dbz: Methods.randomize(dbz),
-      statement: "" })
+      // this.setState({ dbz:this.state.dbz.sort(function(a, b) {return 0.5 - Math.random()}),
+      // statement: "" })
     }
   }
 
@@ -48,7 +53,7 @@ class App extends Component {
     return (
       <div>
         <Navbar 
-        correct={ this.state.statement }
+        statement={ this.state.statement }
         score = { this.state.score }
         topScore = { this.state.topScore }
         />
@@ -57,17 +62,23 @@ class App extends Component {
         </div>
         <Container>
           <Row>
-            { this.state.dbz.map(character => {
-            <Col>
+            { this.state.dbz.map(character => (
+            <Col size="md-3" key={character.id}>
               <Character 
-              key={character.id}
+              id={character.id}
               image={character.image}
-              handleClick={this.handleClick}
-              />
+              handleOnClick={this.handleOnClick} />
             </Col>
-            })}
+            ))}
           </Row>
         </Container>
+        <Alert
+            type="success"
+            style={{ opacity: this.state.topScore === 12  ? 1 : 0, marginBottom: 10 }}
+          >
+            {this.statement}
+        </Alert>
+        <Footer />
       </div>
     );
   }
