@@ -20,7 +20,7 @@ $ heroku addons:create mongolab
 $ git push heroku master
 ```
 ## Walkthroughs
-![GIF](https://github.com/singha53/scraper/blob/master/public/assets/images/scrape_save_clear.gif)
+![GIF](https://github.com/singha53/clicky-game/blob/master/gif/dbz.gif)
 
 ## Programming/Scripting Languages
 ### Front-end
