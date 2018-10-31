@@ -19,36 +19,36 @@ class App extends Component {
   }
 
   handleOnClick = id => {
-    console.log(!this.state.clicked.includes(id))
     // check if id of clicked image matches that in array
     if (!this.state.clicked.includes(id)){
       // if id not found add it to array
       this.setState({ clicked: this.state.clicked.concat(id) })
 
       const updatedScore = this.state.score + 1
-      console.log('updatedScore:' + updatedScore)
       // increment score
       this.setState({ score: updatedScore,
       statement: "You guessed correctly!" })
-      console.log('score:' + this.state.score)
       // update topscore
       if (updatedScore >= this.state.topScore){
         this.setState({ topScore: updatedScore })
       }
       if (updatedScore === 12) {
-        this.setState({ statement: "You win!" })
+      this.setState({ 
+      dbz,
+      statement: 'You win!',
+      score: 0,
+      clicked: [] })
       }
       this.setState({ dbz: this.state.dbz.sort(function(a, b) {return 0.5 - Math.random()}) })
     } else {
       // if id is found, reset game
       this.setState({ 
-      dbz: dbz,
+      dbz,
       statement: 'You guess incorrectly!',
       score: 0,
       clicked: [] })
       this.setState({ dbz:this.state.dbz.sort(function(a, b) {return 0.5 - Math.random()})})
     }
-    console.log(this.state.score)
   }
 
   render() {
@@ -78,7 +78,7 @@ class App extends Component {
             type="success"
             style={{ opacity: this.state.topScore === 12  ? 1 : 0, marginBottom: 10 }}
           >
-            {this.statement}
+            <h1 style={{textAlign: "center"}}> {this.statement}</h1>
         </Alert>
         <Footer />
       </div>
